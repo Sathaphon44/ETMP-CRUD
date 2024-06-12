@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "41ff3770-84a9-485c-b7f0-e186fbf300df",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24265355"
+	},
+	"item": [
+		{
+			"name": "get by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:10100/api/user/6d6bc1a6-89f8-41d4-99f1-c07bcd838b2b",
+					"host": [
+						"localhost"
+					],
+					"port": "10100",
+					"path": [
+						"api",
+						"user",
+						"6d6bc1a6-89f8-41d4-99f1-c07bcd838b2b"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"example@gmail.com\",\r\n    \"username\": \"thanos\",\r\n    \"password\": \"1234\",\r\n    \"role\": \"user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10100/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "10100",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update by id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"6d6bc1a6-89f8-41d4-99f1-c07bcd838b2b\",\r\n    \"username\": \"thanos update\",\r\n    \"password\": \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:10100/api/user",
+					"host": [
+						"localhost"
+					],
+					"port": "10100",
+					"path": [
+						"api",
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete by id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:10100/api/user/6d6bc1a6-89f8-41d4-99f1-c07bcd838b2b",
+					"host": [
+						"localhost"
+					],
+					"port": "10100",
+					"path": [
+						"api",
+						"user",
+						"6d6bc1a6-89f8-41d4-99f1-c07bcd838b2b"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
